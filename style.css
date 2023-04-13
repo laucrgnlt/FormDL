@@ -1,0 +1,179 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+:root {
+    /* CORES CLARAS */
+    --color-light-50: #F8FAFC;
+    
+    /* CORES ESCURAS */
+    --color-dark-50: #797984;
+    --color-dark-100: #312D37;
+    --color-dark-900: #000;
+
+    /* CORES COLORIDAS */
+    --color-purple-50: #7C3AED;
+    --color-purple-100: #A855F7;
+    --color-purple-200: #BF46EF;
+
+    /* GRADIENTE */
+    --color-gradient: linear-gradient(90deg, var(--color-purple-50), var(--color-purple-100), var(--color-purple-200));
+}
+
+* {
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+    margin: 0px;
+}
+
+#formulario {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--color-light-50);
+    gap: 30px;
+    padding: 30px 40px;
+    box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.336);
+    height: fit-content;
+    animation: dark-to-light 0.3s ease-in-out;
+}
+
+.dark#formulario {
+    color: var(--color-light-50);
+    background-color: var(--color-dark-100);
+    animation: light-to-dark 0.3s ease-in-out;
+}
+
+.dark#formulario .input-field input, 
+.dark#formulario .input-field i {
+    color: var(--color-light-50);
+} 
+
+a {
+    color: #000;
+}
+
+form {
+    width: 500px;
+    margin: 5px auto;
+}
+
+#mode-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-size: 20px;
+    width: 20px;
+}
+
+h1 {
+    text-align: center;
+    font-size: 22px;
+    margin: 0px;
+}
+
+p {
+    margin: 0px auto;
+    color: #2C2C2C;
+    text-align: center;
+}
+
+fieldset {
+    border-radius: 5px;
+    border: 1px solid #CCC;
+}
+
+label {
+    font-weight: bold;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 3px;
+    border: 1px solid #CCC;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    margin-top: 2px;
+    margin-bottom: 10px;
+    outline: none;
+}
+
+button {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #333;
+    color: #FFF;
+    font-size: 1.1rem;
+    cursor: pointer;
+    width: 500px;
+    text-transform: uppercase;
+}
+
+#programacao {
+    display: flex;
+}
+
+.input-programacao {
+    margin: 0px;
+}
+
+.label-programacao {
+    width: 80px;
+    text-align: center;
+    font-weight: 200;
+}
+
+::placeholder {
+    font-size: 16px;
+}
+
+.titulo-tecnologias {
+    display: block;
+}
+
+.input-tecnologias[type="checkbox"] {
+    width: 13px;
+}
+
+.check-tecnologias {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.quatro {
+    display: flex;
+    gap: .5rem;
+}
+
+.input-field i {
+    font-size: 18px;
+    color: var(--color-dark-900);
+}
+
+#forgot-pass a {
+    text-decoration: none;
+    font-size: 12px;
+    margin-top: -2px;
+}
+
+@keyframes dark-to-light {
+    0% {
+        background-color: var(--color-dark-100);
+    }
+
+    100% {
+        background-color: var(--color-light-50);
+    }
+}
+
+@keyframes light-to-dark {
+    0% {
+        background-color: var(--color-light-50);
+    }
+
+    100% {
+        background-color: var(--color-dark-100);
+    }
+}

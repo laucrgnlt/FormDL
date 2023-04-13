@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css">
+    <script src="assets/js/script.js" defer></script>
+    <script type="text/javascript" src="assets/js/script-button.js" defer></script>
+    <link rel="shortcut icon" href="assets/img/hand-index.svg" type="image/x-icon">
+</head>
+
+<body>
+    <main id="formulario">
+        <form id="form">
+            <fieldset>
+                <i id="mode-icon" class="bi bi-moon-fill"></i>
+                <h1>Formulário Para Cadastro de Desenvolvedores Com Validação JavaScript</h1>
+                <p>Complete abaixo com as suas informações pessoais</p>
+                <div>
+                    <label for="name">Nome:</label>
+                    <div class="input-field">
+                        <i class="bi bi-person-fill"></i>
+                        <input class="informacoes" type="text" id="name">
+                    </div>
+                </div>
+
+                <div>
+                    <label for="email">E-mail:</label>
+                    <div class="input-field">
+                        <i class="bi bi-envelope-fill"></i>
+                        <input class="informacoes" type="email" id="email">
+                    </div>
+                </div>
+
+                <div>
+                    <label for="password">Senha:</label>
+                    <div class="input-field">
+                        <i class="bi bi-key-fill"></i>
+                        <input class="informacoes" type="password" id="password">
+                    </div>
+                </div>
+
+                <div id="forgot-pass">
+                    <a href="#">
+                        Esqueceu a sua senha?
+                    </a>
+                </div>
+
+                <div>
+                    <label for="job">Situação de Trabalho:</label>
+                    <select name="job" id="job">
+                        <option disabled selected>Está buscando emprego?</option>
+                        <option value="yes">Sim</option>
+                        <option value="no">Não</option>
+                    </select>
+                </div>
+
+                <div id="programacao">
+                    <label style="width: 260px;">De qual lado da aplicação você desenvolve?</label>
+                    <label class="label-programacao">
+                        <input type="radio" name="dev-side" value="front-end" class="input-programacao">Front-end
+                    </label>
+                    <label class="label-programacao">
+                        <input type="radio" name="dev-side" value="back-end" class="input-programacao">Back-end
+                    </label>
+                    <label class="label-programacao">
+                        <input type="radio" name="dev-side" value="fullstack" class="input-programacao">Fullstack
+                    </label>
+                </div>
+
+                <div>
+                    <label>Senioridade:</label>
+                    <select id="senioridade">
+                        <option disabled selected>Selecione o seu nível atual na profissão:</option>
+                        <option>Junior</option>
+                        <option>Pleno</option>
+                        <option>Senior</option>
+                    </select>
+                </div>
+
+                <div id="tecnologias">
+                    <label class="titulo-tecnologias">Selecione as tecnologias que você utiliza:</label>
+                    <div class="quatro">
+                        <div class="check-tecnologias">
+                            <label>HTML</label>
+                            <input class="input-tecnologias" type="checkbox" value="HTML">
+                        </div>
+                        <div class="check-tecnologias">
+                            <label>CSS</label>
+                            <input class="input-tecnologias" type="checkbox" value="CSS">
+                        </div>
+                        <div class="check-tecnologias">
+                            <label>PHP</label>
+                            <input class="input-tecnologias" type="checkbox" value="PHP">
+                        </div>
+                        <div class="check-tecnologias">
+                            <label>Node</label>
+                            <input class="input-tecnologias" type="checkbox" value="Node">
+                        </div>
+                        <div class="check-tecnologias">
+                            <label>Java</label>
+                            <input class="input-tecnologias" type="checkbox" value="Java">
+                        </div>
+                        <div class="check-tecnologias">
+                            <label>Python</label>
+                            <input class="input-tecnologias" type="checkbox" value="Python">
+                        </div>
+                        <div class="check-tecnologias">
+                            <label>C++</label>
+                            <input class="input-tecnologias" type="checkbox" value="C++">
+                        </div>
+                        <div class="check-tecnologias">
+                            <label>Ruby</label>
+                            <input class="input-tecnologias" type="checkbox" value="Ruby">
+                        </div>
+                        <div class="check-tecnologias">
+                            <label>Prolog</label>
+                            <input class="input-tecnologias" type="checkbox" value="Prolog">
+                        </div>
+                        <div class="check-tecnologias">
+                            <label>JavaScript</label>
+                            <input class="input-tecnologias" type="checkbox" value="JavaScript">
+                        </div>
+                    </div>
+                    <div>
+                        <label>Outra:</label>
+                        <input class="input-tecnologias" type="text">
+                    </div>
+                </div>
+
+                <div>
+                    <label for="message">Conte um pouco da sua experiência:</label>
+                    <textarea name="message" id="message" maxlength="500"
+                        placeholder="Máximo de 500 caracteres..."></textarea>
+                </div>
+
+                <button type="submit">Enviar</button>
+            </fieldset>
+        </form>
+    </main>
+</body>
+
+</html>
