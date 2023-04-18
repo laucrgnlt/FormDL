@@ -24,25 +24,24 @@
     margin: 0px;
 }
 
-#formulario {
+#container {
     display: flex;
     flex-direction: column;
     background-color: var(--color-light-50);
     gap: 30px;
-    padding: 30px 40px;
     box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.336);
     height: fit-content;
     animation: dark-to-light 0.3s ease-in-out;
 }
 
-.dark#formulario {
+.dark#container {
     color: var(--color-light-50);
     background-color: var(--color-dark-100);
     animation: light-to-dark 0.3s ease-in-out;
 }
 
-.dark#formulario .input-field input, 
-.dark#formulario .input-field i {
+.dark#container .input-field input, 
+.dark#container .input-field i {
     color: var(--color-light-50);
 } 
 
@@ -76,11 +75,6 @@ p {
     text-align: center;
 }
 
-fieldset {
-    border-radius: 5px;
-    border: 1px solid #CCC;
-}
-
 label {
     font-weight: bold;
 }
@@ -98,7 +92,7 @@ textarea {
     outline: none;
 }
 
-button {
+#login-button {
     padding: 10px;
     border: none;
     border-radius: 5px;
@@ -108,20 +102,6 @@ button {
     cursor: pointer;
     width: 500px;
     text-transform: uppercase;
-}
-
-#programacao {
-    display: flex;
-}
-
-.input-programacao {
-    margin: 0px;
-}
-
-.label-programacao {
-    width: 80px;
-    text-align: center;
-    font-weight: 200;
 }
 
 ::placeholder {
@@ -152,10 +132,22 @@ button {
     color: var(--color-dark-900);
 }
 
-#forgot-pass a {
+#forgot-password a {
     text-decoration: none;
     font-size: 12px;
     margin-top: -2px;
+}
+
+#linguagem {
+    width: 100px;
+    height: 50px;
+    text-align: center;
+}
+
+#dev-side {
+    width: 100px;
+    height: 50px;
+    text-align: center;
 }
 
 @keyframes dark-to-light {

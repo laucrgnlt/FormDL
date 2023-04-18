@@ -14,132 +14,177 @@
 </head>
 
 <body>
-    <main id="formulario">
-        <form id="form">
-            <fieldset>
+    <main id="container">
+        <form id="login-form">
+            <!-- CABEÇALHO -->
+            <div id="form-header">
+                <!-- ÍCONE DARK MODE -->
                 <i id="mode-icon" class="bi bi-moon-fill"></i>
                 <h1>Formulário Para Cadastro de Desenvolvedores Com Validação JavaScript</h1>
                 <p>Complete abaixo com as suas informações pessoais</p>
-                <div>
-                    <label for="name">Nome:</label>
-                    <div class="input-field">
-                        <i class="bi bi-person-fill"></i>
-                        <input class="informacoes" type="text" id="name">
-                    </div>
-                </div>
+            </div>
 
-                <div>
-                    <label for="email">E-mail:</label>
-                    <div class="input-field">
-                        <i class="bi bi-envelope-fill"></i>
-                        <input class="informacoes" type="email" id="email">
-                    </div>
-                </div>
-
-                <div>
-                    <label for="password">Senha:</label>
-                    <div class="input-field">
-                        <i class="bi bi-key-fill"></i>
-                        <input class="informacoes" type="password" id="password">
-                    </div>
-                </div>
-
-                <div id="forgot-pass">
-                    <a href="#">
-                        Esqueceu a sua senha?
-                    </a>
-                </div>
-
-                <div>
-                    <label for="job">Situação de Trabalho:</label>
-                    <select name="job" id="job">
-                        <option disabled selected>Está buscando emprego?</option>
-                        <option value="yes">Sim</option>
-                        <option value="no">Não</option>
-                    </select>
-                </div>
-
-                <div id="programacao">
-                    <label style="width: 260px;">De qual lado da aplicação você desenvolve?</label>
-                    <label class="label-programacao">
-                        <input type="radio" name="dev-side" value="front-end" class="input-programacao">Front-end
-                    </label>
-                    <label class="label-programacao">
-                        <input type="radio" name="dev-side" value="back-end" class="input-programacao">Back-end
-                    </label>
-                    <label class="label-programacao">
-                        <input type="radio" name="dev-side" value="fullstack" class="input-programacao">Fullstack
+            <!-- INPUTS -->
+            <div id="inputs">
+                <!-- NOME -->
+                <div class="input-box">
+                    <label for="name">Nome:
+                        <div class="input-field">
+                            <input type="text" id="name" name="name" placeholder="Ex.: Fulano de Tal">
+                        </div>
                     </label>
                 </div>
 
-                <div>
-                    <label>Senioridade:</label>
-                    <select id="senioridade">
-                        <option disabled selected>Selecione o seu nível atual na profissão:</option>
-                        <option>Junior</option>
-                        <option>Pleno</option>
-                        <option>Senior</option>
-                    </select>
+                <!-- E-MAIL -->
+                <div class="input-box">
+                    <label for="email">E-mail:
+                        <div class="input-field">
+                            <input type="email" id="email" name="email" placeholder="Ex.: nome@email.com">
+                        </div>
+                    </label>
                 </div>
 
-                <div id="tecnologias">
-                    <label class="titulo-tecnologias">Selecione as tecnologias que você utiliza:</label>
-                    <div class="quatro">
-                        <div class="check-tecnologias">
-                            <label>HTML</label>
-                            <input class="input-tecnologias" type="checkbox" value="HTML">
+                <!-- SENHA -->
+                <div class="input-box">
+                    <label for="password">Senha:
+                        <div class="input-field">
+                            <input type="password" id="password" name="password"
+                                placeholder="Formato padrão de 8 caracteres">
                         </div>
-                        <div class="check-tecnologias">
-                            <label>CSS</label>
-                            <input class="input-tecnologias" type="checkbox" value="CSS">
-                        </div>
-                        <div class="check-tecnologias">
-                            <label>PHP</label>
-                            <input class="input-tecnologias" type="checkbox" value="PHP">
-                        </div>
-                        <div class="check-tecnologias">
-                            <label>Node</label>
-                            <input class="input-tecnologias" type="checkbox" value="Node">
-                        </div>
-                        <div class="check-tecnologias">
-                            <label>Java</label>
-                            <input class="input-tecnologias" type="checkbox" value="Java">
-                        </div>
-                        <div class="check-tecnologias">
-                            <label>Python</label>
-                            <input class="input-tecnologias" type="checkbox" value="Python">
-                        </div>
-                        <div class="check-tecnologias">
-                            <label>C++</label>
-                            <input class="input-tecnologias" type="checkbox" value="C++">
-                        </div>
-                        <div class="check-tecnologias">
-                            <label>Ruby</label>
-                            <input class="input-tecnologias" type="checkbox" value="Ruby">
-                        </div>
-                        <div class="check-tecnologias">
-                            <label>Prolog</label>
-                            <input class="input-tecnologias" type="checkbox" value="Prolog">
-                        </div>
-                        <div class="check-tecnologias">
-                            <label>JavaScript</label>
-                            <input class="input-tecnologias" type="checkbox" value="JavaScript">
-                        </div>
-                    </div>
-                    <div>
-                        <label>Outra:</label>
-                        <input class="input-tecnologias" type="text">
+                    </label>
+
+                    <!-- ESQUECEU A SENHA -->
+                    <div id="forgot-password">
+                        <a href="#">
+                            Esqueceu a sua senha?
+                        </a>
                     </div>
                 </div>
 
-                <div>
-                    <label for="message">Conte um pouco da sua experiência:</label>
-                    <textarea name="message" id="message" maxlength="500"
-                        placeholder="Máximo de 500 caracteres..."></textarea>
+                <!-- SITUAÇÃO DE TRABALHO -->
+                <div class="input-box">
+                    <label for="job">Situação de Trabalho:
+                        <div class="input-field">
+                            <select id="job" name="job">
+                                <option disabled selected>Está buscando emprego?</option>
+                                <option value="yes">Sim</option>
+                                <option value="no">Não</option>
+                            </select>
+                        </div>
+                    </label>
                 </div>
 
-                <button type="submit">Enviar</button>
-            </fieldset>
+                <!-- LADO DA APLICAÇÃO -->
+                <div class="input-box">
+                    <label>De qual lado da aplicação você desenvolve?
+                        <div class="input-field">
+                            <div id="dev-side">
+                                <label>Front-end
+                                    <input type="radio" name="dev-side" value="front-end">
+                                </label>
+                            </div>
+                            <div id="dev-side">
+                                <label>Back-end
+                                    <input type="radio" name="dev-side" value="back-end">
+                                </label>
+                            </div>
+                            <div id="dev-side">
+                                <label>Fullstack
+                                    <input type="radio" name="dev-side" value="fullstack">
+                                </label>
+                            </div>
+                        </div>
+                    </label>
+                </div>
+
+                <!-- SENIORIDADE -->
+                <div class="input-box">
+                    <label for="senioridade">Senioridade:
+                        <div class="input-field">
+                            <select id="senioridade" name="senioridade">
+                                <option disabled selected>Selecione o seu nível atual na profissão:</option>
+                                <option value="junior">Junior</option>
+                                <option value="pleno">Pleno</option>
+                                <option value="senior">Senior</option>
+                            </select>
+                        </div>
+                    </label>
+                </div>
+
+                <!-- TECNOLOGIAS -->
+                <div class="input-box">
+                    <label for="tecnologias">Selecione as tecnologias que você utiliza:
+                        <div class="input-field">
+                            <div id="linguagem">
+                                <label>HTML
+                                    <input type="checkbox" value="HTML">
+                                </label>
+                            </div>
+                            <div id="linguagem">
+                                <label>CSS
+                                    <input type="checkbox" value="CSS">
+                                </label>
+                            </div>
+                            <div id="linguagem">
+                                <label>PHP
+                                    <input type="checkbox" value="PHP">
+                                </label>
+                            </div>
+                            <div id="linguagem">
+                                <label>Node
+                                    <input type="checkbox" value="Node">
+                                </label>
+                            </div>
+                            <div id="linguagem">
+                                <label>Java
+                                    <input type="checkbox" value="Java">
+                                </label>
+                            </div>
+                            <div id="linguagem">
+                                <label>Python
+                                    <input type="checkbox" value="Python">
+                                </label>
+                            </div>
+                            <div id="linguagem">
+                                <label>C++
+                                    <input type="checkbox" value="C++">
+                                </label>
+                            </div>
+                            <div id="linguagem">
+                                <label>Ruby
+                                    <input type="checkbox" value="Ruby">
+                                </label>
+                            </div>
+                            <div id="linguagem">
+                                <label>Prolog
+                                    <input type="checkbox" value="Prolog">
+                                </label>
+                            </div>
+                            <div id="linguagem">
+                                <label>JavaScript
+                                    <input type="checkbox" value="JavaScript">
+                                </label>
+                            </div>
+                            <label>Outra:
+                                <input type="text" placeholder="Ex.: MySQL">
+                            </label>
+                        </div>
+                    </label>
+                </div>
+
+                <!-- EXPERIÊNCIA -->
+                <div class="input-box">
+                    <label for="message">Conte um pouco da sua experiência:
+                        <div class="input-field">
+                            <textarea name="message" id="message" maxlength="500"
+                                placeholder="Máximo de 500 caracteres"></textarea>
+                        </div>
+                    </label>
+                </div>
+            </div>
+
+            <!-- BOTÃO DE CADASTRO -->
+            <button type="submit" id="login-button">Enviar</button>
         </form>
     </main>
 </body>
